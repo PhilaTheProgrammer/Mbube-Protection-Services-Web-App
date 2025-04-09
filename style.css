@@ -1,0 +1,758 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+/* || GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scrollbar-width: 4px;
+}
+
+body {
+    font-family: var(--FF);
+    font-size: var(--FS);
+    background-color: #000;
+}
+
+/* Variables */
+:root {
+
+    /* HEADER COMPONENTS */
+
+      /* FONT */
+      --FF: "Nunito", sans-serif;
+      --FS: 28px;
+
+     /* COLOR */
+     --BGCOLOR: #000;
+     --ALT-BGCOLOR: none;
+     --NAVTEXT-COLOR: white;
+     --HOVER-NAVTEXT-COLOR: yellow;
+
+      /* GENERAL */
+    --OVERLAY: rgba(0, 0, 0, 0.5);
+    --BOX-SHADOW: 1px 1px 15px white;
+    --HOMEBOX-SHADOW: 1px 1px 15px yellow;
+    --HOVER-BOX-SHADOW: 1px 1px 15px yellow;
+    --NAV-TEXT-SHADOW: 1px 1px 15px white;
+    --HOVER-TEXT-SHADOW: 1px 1px 15px white;
+
+    /* MAIN COMPONENTS */
+    --TEXT-COLOR: white;
+    --HOVER-TEXT-COLOR:none;
+    --LINEAR-GRADIENT-BGCOLOR: linear-gradient(275deg, black, yellow); ;
+}
+
+/* || HEADER */
+header {
+    background-color: var(--BGCOLOR);
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 13.5vh;
+    font-size: var(--FS);
+    z-index: 1;
+    box-shadow: 0px 2vh 15px rgba(233, 255, 35, 0.7);
+}
+
+.nav-bar{
+    display: flex;
+    flex-direction: row;
+    column-gap: 95vh;
+    color: var(--NAVTEXT-COLOR);
+    align-items: center;
+    position: absolute;
+    left: 10vh;
+}
+
+.logo-box{
+    width: 10vh;
+    height: 10vh;
+    margin: 10px;
+    position: absolute;
+    top: 30px;
+}
+
+.logo{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    box-shadow: var(--BOX-SHADOW);
+    position: relative;
+    bottom: 4.5vh;
+}
+
+.logo:hover{
+    box-shadow: var(--HOVER-BOX-SHADOW);
+}
+
+.nav-bar h1 a{
+    position: absolute;
+    top: 30px;
+    left: 110px;
+    font-size: var(--FS);
+    color: var(--TEXT-COLOR);
+    font-weight: 700;
+    text-decoration: none;
+}
+ 
+.nav-bar h1 a:hover{
+     color: var(--HOVER-NAVTEXT-COLOR);
+     text-shadow: var(--NAV-TEXT-SHADOW);
+}
+
+.nav-items{
+    display: flex;
+    flex-direction: row;
+    column-gap: 30px;
+    list-style: none;
+    position: relative;
+    top: 30px;
+    font-size: var(--FS);
+}
+
+.list-item a{
+     color: var(--TEXT-COLOR);
+     list-style: none;
+     text-decoration: none;
+}
+
+.list-item a:hover{
+    color: var(--HOVER-NAVTEXT-COLOR);
+    text-shadow:  var(--HOVER-TEXT-SHADOW);
+} 
+
+/* || MAIN */
+.web-content{
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 500vh;
+} 
+
+section {
+    position: absolute;
+    max-width: 99vw;
+    max-height: 100vh;
+}
+
+/* Home Section */
+.web-content .home{
+    height: 100%;
+    width: 100%;
+    left: 0px;
+    top: 0vh;
+    background-image: url(Img\ -\ 1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.home .home-container{
+    background: var(--OVERLAY);
+    width: 100%;
+    height: 100vh;
+}
+
+.home .prompt-box{
+    position: relative;
+    top: 15vh;
+    left: 10vh;
+    border:none;
+    outline: none;
+    border-radius: 5px;
+    background: rgba(92, 83, 1, 0.3);
+    width: 95vh;
+    height: 60vh;
+    box-shadow: var(--HOMEBOX-SHADOW) ;
+}
+
+.home .prompt-box .headline{
+    position: relative;
+    top: 10vh;
+    left: 10vh;
+    font-size: 7vh;
+    color: white;
+    align-items: center;
+    justify-content: center;
+}
+
+.home .prompt-box .headline:hover{
+    text-shadow: 1px 2px 20px rgba(255, 255, 148, 0.123);
+}
+
+.sub-input{
+    position: relative;
+    top: 20vh;
+    left: 10vh;
+    height: 7vh;
+    width: 40vh;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    border: none;
+    outline: 0;
+    padding-left: 30px;
+}
+
+.sub-input:hover{
+    box-shadow: 1px 1px 50px white;
+}
+
+.btn-sub{
+    position: relative;
+    top: 20.1vh;
+    left: 8.9vh;
+    width: 15vh;
+    height: 7.23vh; 
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    background: linear-gradient(275deg, black, yellow);
+    color: white;
+    font-size: 2.5vh;
+    font-weight: 700;
+    outline: 0;
+    border: none;
+}
+
+.btn-sub:hover{
+    background: linear-gradient(360deg, black, yellow);
+    box-shadow: 1px 2px 50px white;
+}
+
+::placeholder{
+    color:  rgb(0, 0, 0);
+    font-size: 2vh;
+    min-height:  50%;
+    opacity: 0.7;
+}
+
+/* Services Section */
+.services{
+    position: absolute;
+    top:111.6vh;
+    left: 0;
+    width: 100%;
+    height: 110vh;
+    background: linear-gradient(0deg, yellow, black);
+    padding: 70px;
+}
+
+.services .ser-headline{
+  position: relative;
+  left: 45%;
+  bottom: 20%;
+  font-size: 7vh;
+  color: white;
+  text-shadow: 1px 1px 5px yellow;
+}
+
+.service-container{
+    position: relative;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    width: 85vw;
+    height: 85vh;
+}
+
+.list{
+   /* list-style-image: url(Images/shield.png);*/
+   list-style: none;
+}
+
+.service-container .image-box{
+    position: relative;
+    top: 0%;
+    left: 20.4%;
+    width: 55%;
+    height: 85vh;
+    border-radius: 5px; 
+}
+
+ .image-box img{
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+}
+
+.ser-item .icon{
+    width: 3vh;
+    height: 3vh;
+    position: relative;
+    top: 25px;
+    margin-left: 10px;
+    color: yellow;
+    border: none;
+    outline: none;
+}
+
+.ser-item .service-title{
+   position: relative;
+   left: 40px;
+   color: black;
+   font-size: 20px;
+   text-shadow: 1px 2px 5px rgba(0, 0, 0, 0);
+}
+
+
+.ser-item .icon:hover{
+    text-shadow: 1px 2px 5px yellow;
+}
+
+.ser-item .service-title:hover{
+    text-shadow: 2px 3px 2px yellow;
+    color: navy;
+    cursor:pointer;
+    transform: scale(1.2);
+    position: relative;
+    left: 80px;
+}
+
+.ser-item .service-title:active{
+    color: red;
+    cursor:pointer;
+}
+ 
+/* ABOUT SECTION */
+.about{
+    position: absolute;
+    top: 211.6vh;
+    left: 0;
+    width: 100%;
+    height: 95vh;
+    /*background: linear-gradient(180deg, rgb(143, 143, 13), rgb(73, 68, 68));*/
+    background:rgb(206, 174, 106);
+    padding: 90px;
+}
+
+.about-headline{
+    position: relative;
+    left: 45%;
+    right: 50%;
+    bottom: 50px;
+    font-weight: 700;
+    font-size: 8vh;
+    color: yellow;
+    text-shadow: 2px 3px 1px rgb(0, 0, 0);
+}
+
+.about-container{
+    position: relative;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    background: linear-gradient(180deg, rgb(143, 143, 13), rgb(73, 68, 68));
+}
+
+.about-container .image-box{
+    opacity: 1;
+    width: 700vh;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.about-container .about-text{
+    margin: 5vh;
+    font-weight: 600;
+    font-size: 20px;
+   /* color: rgb(10, 15, 39);*/
+    color:white;
+    letter-spacing: 2px;
+    word-spacing: 3px;
+    justify-content: center;
+    align-items: center;
+}  
+
+.btn-container .btn-About{
+    position: relative;
+    top: 80%;
+    right: 40%;
+    width: 100px;
+    height: 7vh;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background: linear-gradient(128deg, yellow, black);
+    color:white;
+    cursor: pointer;
+    box-shadow: 2px 3px 5px black;
+}
+
+
+
+
+/* CONTACT SECTION */
+/* Contact Row - Start */
+.contact{
+    position: absolute;
+    top:303.6vh;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(160deg, yellow, black);
+    padding: 50px;
+}
+
+.contact-headline{
+    font-size: 40px;
+    top: 15vh;
+    transform: translate(45%);
+    text-shadow: 2px 3px 5px white;
+}
+
+.contact-container{
+    display: flex;
+    flex-direction: row;
+    background: white;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    width: 140vh;
+    margin: 5vh;
+    height: 65vh;
+    transform: translate(30vh);
+}
+
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1vh;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    padding: 10vh;
+    box-shadow: 1px 2px 15px rgb(255, 255, 255);
+}
+
+.first-input{
+  display: flex;
+  flex-direction: row;
+  column-gap: 15vh;
+  position: relative;
+  bottom: 5vh;
+}
+
+.first-input .input-box{
+    height: 7vh;
+    width: 50vh;
+    border: none;
+    outline: none;
+}
+
+.first-input input{
+    height: 100%;
+    width: 100%;
+    border: 1px solid rgb(143, 143, 13);
+    border-radius: 5px;
+    padding-left: 3vh;
+}
+
+.second-input{
+    display: flex;
+    flex-direction: row;
+    column-gap: 15vh;
+    position: relative;
+    top: 5vh;
+}
+
+
+.second-input .input-box{
+    height: 7vh;
+    width: 50vh;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    position: relative;
+    bottom: 4vh;
+}
+
+.second-input input{
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgb(143, 143, 13);
+    border-radius: 5px;
+    padding-left: 3vh;
+}
+
+.contact-form .textarea-box{
+    position: relative;
+    top: 5vh;
+    width: 115vh;
+    height: 20vh;
+    border-radius: 5px;
+}
+
+.textarea-box textarea{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    border: 1px solid rgb(143, 143, 13);
+    outline: none;
+    box-shadow: 2px 3px 5px yellowgreen;
+    padding-top: 3vh;
+    padding-left: 7vh;
+}
+
+.sub-btn{
+    background-color: rgb(143, 143, 13);
+    width: 96%;
+    height: 7vh;
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+    position: relative;
+    top: 7vh;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 1px 2px black;
+}
+
+.sub-btn:hover{
+    color: black;
+    cursor: pointer;
+    box-shadow: 1px 2px rgb(217, 230, 49);
+    transform: scale(1.03); 
+}
+
+.testimony{
+    position: absolute;
+    top: 403.6vh;
+    left:0;
+    width: 100%;
+    height: 100vh;
+    background: rgb(6, 80, 55);
+    justify-items: center;
+    align-items: center;
+} 
+
+.testimony-headline{
+    transform: translateY(5vh);
+    font-size: 40px;
+    color: #000000;
+    text-shadow: 2px 2px 5px yellow;
+}
+
+.content-box{
+    transform: translateY(10vh);
+    justify-items: center;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid yellow;
+    width: 120vh;
+    height: 60vh;
+    box-shadow: 1px 2px 15px yellow;
+}
+
+.content-box:hover {
+    box-shadow: 1px 2px 15px rgb(240, 240, 125);
+}
+
+
+
+.content-box video{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.video-title {
+    font-size: 35px;
+    color: #000000;
+    text-shadow: 2px 2px 5px yellow;
+}
+
+/* FOOTER */
+.footer{
+    position: absolute;
+    top: 512vh;
+    left: 0px;
+   /*  height: -10vh; */
+    width: 100%;
+    background: #000000;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    transform: translate(0vh, 6vh);
+}
+
+.logo-box-2{
+    width: 10vh;
+    height: 10vh;
+    margin: 10px;
+    transform: translate(10%);
+}
+
+.logo-2{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 15px white;
+}
+
+.logo-2:hover{
+    box-shadow: 1px 1px 15px yellow;
+}
+
+
+.web-title{
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    left: 20vh;
+    top: 1vh;
+    bottom: 1vh;
+    font-size: 4vh;
+    font-weight: 700;
+    text-decoration: none;
+    color:white;
+}
+
+.web-title:hover{
+    color: yellow;
+    text-shadow: 1px 1px 15px yellow;
+}
+
+.code{
+    color: white;
+    font-size: 14px;
+    transform: translate(25vh, 20vh);
+}
+
+address{
+    color: white;
+    font-size: 18px;
+    transform: translate(10vh, 9vh);
+    letter-spacing: 5px;
+    word-spacing: 5px;
+    display: inline;
+}
+
+address img{
+    color: white;
+    background: white;
+    width: 3vh;
+}
+
+.line-A{
+    background: white;
+    height: 40vh;
+    width: 3px;
+    transform: translate(35vh, 3vh);
+    animation-name: NeonLights;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes NeonLights{
+    0%{background-color: white;
+        box-shadow: 1px 1px 15px yellow;}
+    50%{background-color: yellow;
+        box-shadow: 1px 1px 15px yellow;}
+    100%{background-color: white;
+        box-shadow: 1px 1px 15px yellow;}
+}
+
+.socialMedia{
+    transform: translate(95vh, 5vh);
+    color: white;
+    text-decoration: none;
+    font-size: 3vh;
+}
+
+.socialMedia .social-headline {
+    transform: translate(-10vh, 1vh);
+}
+
+.socialMedia ul {
+    transform: translate(-10vh, 5vh);
+    list-style: none;
+}
+
+.socialMedia li a{
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    transform: translate(95vh, 20vh);
+}
+
+.socialMedia li a:hover{
+    color: yellow;
+    text-shadow:  1px 1px 15px white;
+}
+
+.line-B{
+    background: white;
+    height: 40vh;
+    width: 3px;
+    transform:translate(55vh, 3vh);
+    animation-name: NeonLights;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.quickLink{
+    color: white;
+    transform:translate(15vh, 5vh);
+}
+
+.line-C{
+    background: white;
+    height: 40vh;
+    width: 3px;
+    transform:translate(60vh, 3vh);
+    animation-name: NeonLights;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.footer-items{
+    transform:translate(1vh, 5vh);
+    font-size: 3vh;
+    list-style: none;
+    color: white;
+}
+
+.footer-contact{
+    transform: translate( 65vh, 1vh);
+    color: white;
+}
+
+.footer-contact p{
+    transform: translate( 5vh, 4vh);
+    font-size: 20px;
+    color: blue;
+    animation-name: NeonLights;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+
+
+
+
+/* TESTIMONY SECTION */
+
+
+/* || FOOTER*/
